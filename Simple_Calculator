@@ -1,0 +1,35 @@
+from tkinter import *
+import tkinter.messagebox
+def result():
+    a=t1.get()
+    b=t2.get()
+    res=int(a)+int(b)
+    tkinter.messagebox.showinfo("Result is:",res)
+def result1():
+    a=t1.get()
+    b=t2.get()
+    res=int(a)-int(b)
+    tkinter.messagebox.showinfo("Result is:",res)
+def result2():
+    a=t1.get()
+    b=t2.get()
+    res=int(a)/int(b)
+    tkinter.messagebox.showinfo("Result is:",res)
+def result3():
+    a=t1.get()
+    b=t2.get()
+    res=int(a)*int(b)
+    tkinter.messagebox.showinfo("Result is:",res)
+root=Tk()
+t1=Entry(root)
+t1.pack()
+t2=Entry(root)
+t2.pack()
+b=Button(root,text="PLUS(+)",width=20,command=result)
+b.pack(side=LEFT)
+b1=Button(root,text="MINUS(-)",width=20,command=result1)
+b1.pack(side=RIGHT)
+b2=Button(root,text="DIVIDE(/)",width=20,command=result2)
+b2.pack()
+b3=Button(root,text="MULTIPICATION(*)",width=20,command=result3)
+b3.pack()
